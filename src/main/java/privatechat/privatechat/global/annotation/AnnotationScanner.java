@@ -22,7 +22,6 @@ public class AnnotationScanner  {
         return applicationContext.getBeansWithAnnotation(SocketListener.class);
     }
     public void registerSocketMapping(){
-        Map<Object, List<Method>> result = new HashMap<>();
         Map<String, Object> socketControllers = scanSocketController();
         for(Object controller : socketControllers.values()){
             server.addListeners(controller);
