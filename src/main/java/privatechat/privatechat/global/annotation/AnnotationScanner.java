@@ -20,7 +20,7 @@ public class AnnotationScanner  {
     private final SocketIOServer server;
 
     private Map<String, Object> scanSocketController() {
-        return applicationContext.getBeansWithAnnotation(SocketController.class);
+        return applicationContext.getBeansWithAnnotation(SocketListener.class);
     }
     public void registerSocketMapping(){
         Map<Object, List<Method>> result = new HashMap<>();
