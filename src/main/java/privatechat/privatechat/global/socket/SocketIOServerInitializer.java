@@ -8,7 +8,7 @@ import privatechat.privatechat.global.annotation.AnnotationScanner;
 
 @Component
 @RequiredArgsConstructor
-public class SocketHandler implements SmartInitializingSingleton {
+public class SocketIOServerInitializer implements SmartInitializingSingleton {
     private final SocketIOServer server;
     private final AnnotationScanner scanner;
 
