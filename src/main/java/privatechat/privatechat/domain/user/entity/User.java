@@ -5,6 +5,9 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import privatechat.privatechat.domain.room.entity.Room;
+
+import java.util.List;
 
 @Entity
 @Getter
@@ -21,4 +24,12 @@ public class User {
     private String password;
     @Column(nullable = false)
     private String email;
+
+    @ManyToMany
+    @JoinTable(
+        name = "user_rooms",
+        joinColumns = @JoinColumn(name = "user_id"),
+        inverseJoinColumns = @JoinColumn(name = "room_id")
+    )
+    private List<Room> rooms;
 }
