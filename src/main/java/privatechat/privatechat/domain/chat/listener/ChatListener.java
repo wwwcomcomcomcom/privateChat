@@ -1,4 +1,4 @@
-package privatechat.privatechat.domain.chat;
+package privatechat.privatechat.domain.chat.listener;
 import com.corundumstudio.socketio.SocketIOClient;
 import com.corundumstudio.socketio.annotation.OnEvent;
 import org.springframework.stereotype.Component;
