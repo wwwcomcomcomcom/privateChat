@@ -1,4 +1,4 @@
-package privatechat.privatechat.global.annotation;
+package privatechat.privatechat.global.annotation.socket;
 
 import com.corundumstudio.socketio.SocketIOServer;
 import lombok.RequiredArgsConstructor;
