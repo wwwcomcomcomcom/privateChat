@@ -4,7 +4,7 @@ import com.corundumstudio.socketio.SocketIOServer;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.SmartInitializingSingleton;
 import org.springframework.stereotype.Component;
-import privatechat.privatechat.global.annotation.AnnotationScanner;
+import privatechat.privatechat.global.annotation.socket.AnnotationScanner;
 
 @Component
 @RequiredArgsConstructor
