@@ -1,5 +1,6 @@
 package privatechat.privatechat.global.config;
 
+import com.corundumstudio.socketio.AuthorizationListener;
 import com.corundumstudio.socketio.SocketConfig;
 import com.corundumstudio.socketio.SocketIOServer;
 import org.springframework.beans.factory.annotation.Value;
@@ -17,7 +18,7 @@ public class SocketIOConfig {
     @Value("${netty-socketio.workerThreads}")
     private int workerThreads;
     @Bean
-    public SocketIOServer socketIOServer(){
+    public SocketIOServer socketIOServer(AuthorizationListener authorizationListener) {
         com.corundumstudio.socketio.Configuration config = new com.corundumstudio.socketio.Configuration();
         config.setPort(port);
         config.setHostname(host);
@@ -28,6 +29,7 @@ public class SocketIOConfig {
         socketConfig.setReuseAddress(true);
 
         config.setSocketConfig(socketConfig);
+        config.setAuthorizationListener(authorizationListener);
 
         return new SocketIOServer(config);
     }
